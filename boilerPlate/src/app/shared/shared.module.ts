@@ -5,11 +5,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 
 @NgModule({
-  declarations: [TitleCaseDirective, HeaderComponent, FooterComponent, SidebarComponent, ConfirmDialogComponent],
+  declarations: [TitleCaseDirective, HeaderComponent, FooterComponent, SidebarComponent, ConfirmDialogComponent, NotFoundComponent],
   imports: [
     CommonModule
   ]
