@@ -1,1 +1,19 @@
-<p>confirm-dialog works!</p>
+<div class="modal fade custom-modal" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+
+    <button type="button" class="close" data-dismiss="modal" #closeButton aria-label="Close">
+    </button>
+
+    <div class="modal-content">
+      <div class="modal-body custom-modal-body">
+        <img src="../../../../assets/images/action/danger.svg" alt="" />
+        <p class="text-danger">{{confirmationMessage}}</p>
+        <div>
+          <button type="button" class="btn btn-dark-blue px-4" (click)="yesClick()">{{actionText}}</button>
+          <button type="button" class="btn btn-dark-blue-outline ml-3" (click)="close()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
