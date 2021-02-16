@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { get } from 'lodash';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +11,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class LoginComponent implements OnInit {
   public loginForm!: FormGroup;
+  public get = get;
   constructor(
     private router: Router,
     private formBuilder: FormBuilder,
@@ -25,8 +27,16 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-    localStorage.setItem('auth-token', 'fdfd');
-    this.router.navigate(['private/dashboard']);
-    this.toastr.success('Logged in');
+    if (this.loginForm.valid) {
+      localStorage.setItem('auth-token', 'fdfd');
+      this.router.navigate(['private/dashboard']);
+      this.toastr.success('Logged in');
+    } else {
+      (Object as any)
+        .values(this.loginForm.controls)
+        .forEach((control: { markAsTouched: () => void }) => {
+          control.markAsTouched();
+        });
+    }
   }
 }
