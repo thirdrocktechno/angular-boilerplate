@@ -1,28 +1,43 @@
-# BoilerPlate
+## Setup Project locally
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
-Node JS version >= 12.0.0
+1. Clone repository
+2. Run `npm install`
 
-## Development server
+## Configurations
 
-- npm install
-- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`Angular CLI` - 11.1.4
+`NodeJS` - 14.5.5
+`Tailwind css` - 2.0.3
 
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Run project locally
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+## How to use
+
+Project has basic common components and design structrured with angular modular architecture.
+
+- Add modules and components based on requirements in public and private modules as per example components given.
+- Follow `tailwind css` for css related changes.
+- Create langulage files in `assets/i18n` folder as per requirement to follow internationalization.
+
+## packages used
+
+`lodash` - For array and objects related coding normalization
+`tailwindcss` - For designing core parts
+`ngx-toastr` - For success/error messages services
+`ngx-translate` - To add internationalization
+
 ## Coding standards
 
-- Use camelcases for variable name declarations
-- Each service file should be related to particular module
-- There should be model interface for each API expected result
-- For HTML designing use tailwind css
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Using latest versions of `Angular` and `NodeJS`
+- Modular architecture with lazy loading
+- Followed `tslint` for best code writing practice.
