@@ -31,7 +31,7 @@ export class ConfirmDialogComponent implements OnInit, OnChanges {
   ngOnInit(): void {}
 
   ngOnChanges(simpleChanges: SimpleChanges): void {
-    if (simpleChanges.closeDialogOnsuccess.currentValue === true) {
+    if (simpleChanges.closeDialogOnsuccess.currentValue) {
       this.close();
     }
   }
