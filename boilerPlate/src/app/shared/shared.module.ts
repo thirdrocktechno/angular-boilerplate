@@ -10,6 +10,14 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientApiService } from './http/http-client-api.service';
 import { HttpResponseHandlerService } from './http/http-response-handler-service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+// tslint:disable-next-line: typedef
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -20,7 +28,20 @@ import { HttpResponseHandlerService } from './http/http-response-handler-service
     ConfirmDialogComponent,
     NotFoundComponent,
   ],
-  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+    HttpClientModule,
+  ],
   providers: [HttpClientApiService, HttpResponseHandlerService],
 
   exports: [

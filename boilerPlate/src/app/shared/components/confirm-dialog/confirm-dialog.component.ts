@@ -9,6 +9,7 @@ import {
   SimpleChanges,
   ViewChild,
 } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-confirm-dialog',
@@ -26,7 +27,10 @@ export class ConfirmDialogComponent implements OnInit, OnChanges {
   // output event to parent component to proceed further and close dialog box
   @Output() succesConfirmation: EventEmitter<any> = new EventEmitter();
 
-  constructor() {}
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
 
   ngOnInit(): void {}
 

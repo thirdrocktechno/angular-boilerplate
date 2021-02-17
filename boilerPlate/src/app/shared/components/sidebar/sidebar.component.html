@@ -3,8 +3,7 @@
   class="flex flex-col  md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0">
   <div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
     <a href="javacript:void(0)"
-      class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">Flowtrail
-      UI</a>
+      class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">{{ 'sidebar.header' | translate }}</a>
     <button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline" (click)="open = !open">
       <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
         <path x-show="!open" fill-rule="evenodd"
@@ -18,17 +17,17 @@
   </div>
   <nav [ngClass]="{'block': open, 'hidden': !open}" class="flex-grow md:block px-4 pb-4 md:pb-0 ">
     <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-      href="javascript:void(0)">Blog</a>
+      href="javascript:void(0)">{{ 'sidebar.blog' | translate }}</a>
     <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-      href="javascript:void(0)">Portfolio</a>
+      href="javascript:void(0)">{{ 'sidebar.portfolio' | translate }}</a>
     <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-      href="javascript:void(0)">About</a>
+      href="javascript:void(0)">{{ 'sidebar.about' | translate }}</a>
     <a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-      href="javascript:void(0)">Contact</a>
+      href="javascript:void(0)">{{ 'sidebar.contact' | translate }}</a>
     <div (click)="open = false" class="relative">
       <button (click)="open = !open"
         class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:block hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-        <span>Dropdown</span>
+        <span>{{ 'sidebar.dropdown' | translate }}</span>
         <svg fill="currentColor" viewBox="0 0 20 20" [ngClass]="{'rotate-180': open, 'rotate-0': !open}"
           class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
           <path fill-rule="evenodd"
@@ -39,11 +38,11 @@
       <div class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg">
         <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
           <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-            href="javascript:void(0)">Link #1</a>
+            href="javascript:void(0)">{{ 'sidebar.link1' | translate }}</a>
           <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-            href="javascript:void(0)">Link #2</a>
+            href="javascript:void(0)">{{ 'sidebar.link2' | translate }}</a>
           <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-            href="javascript:void(0)">Link #3</a>
+            href="javascript:void(0)">{{ 'sidebar.link3' | translate }}</a>
         </div>
       </div>
     </div>

@@ -1,0 +1,40 @@
+{
+  "common": {
+    "cancelBtn": "Cancel",
+    "pageNotFound": "Page not found"
+  },
+  "login": {
+    "title": "Sign in to your account",
+    "emailAddressLabel": "Email address",
+    "emailAddressRequiredMessage": "Please enter Email Id",
+    "validEmailAddressMessage": "Please enter valid Email Id",
+    "passwordLabel": "Password",
+    "passwordRequiredErrorMsg": "Please enter a Password.",
+    "rememberMeLabel": "Remember me",
+    "forgotPasswordLabel": "Forgot your password?",
+    "signInLabel": "Sign in"
+  },
+  "header": {
+    "openMainMenu": "Open main menu",
+    "dashboard": "Dashboard",
+    "team": "Team",
+    "projects": "Projects",
+    "calendar": "Calendar",
+    "viewNotifications": "View notifications",
+    "openUserMenu": "Open user menu",
+    "profile": "Your Profile",
+    "settings": "Settings",
+    "signOut": "Sign out"
+  },
+  "sidebar": {
+    "header": "Header",
+    "blog": "Blog",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact",
+    "dropdown": "Dropdown",
+    "link1": "Link #1",
+    "link2": "Link #2",
+    "link3": "Link #3"
+  }
+}

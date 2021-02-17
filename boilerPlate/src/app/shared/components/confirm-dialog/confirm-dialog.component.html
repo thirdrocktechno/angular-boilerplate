@@ -11,7 +11,8 @@
         <p class="text-danger">{{confirmationMessage}}</p>
         <div>
           <button type="button" class="btn btn-dark-blue px-4" (click)="yesClick()">{{actionText}}</button>
-          <button type="button" class="btn btn-dark-blue-outline ml-3" (click)="close()">Cancel</button>
+          <button type="button" class="btn btn-dark-blue-outline ml-3"
+            (click)="close()">{{ 'common.cancelBtn' | translate }}</button>
         </div>
       </div>
     </div>
