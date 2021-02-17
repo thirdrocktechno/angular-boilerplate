@@ -27,7 +27,7 @@ export class HttpResponseHandlerService {
 
       case 403:
         // Access is forbidden to the requested page.
-        this.handleForbidden();
+        this.handleForbidden(response);
         break;
 
       case 409:
@@ -35,11 +35,8 @@ export class HttpResponseHandlerService {
         this.handleAlreadyExists(response);
         break;
 
-      case 415:
-        // If server responses with invalid content type code.
-        break;
-
       case 500:
+        this.unhandeledError(response);
         // The request was not completed. The server met an unexpected condition.
         break;
 
@@ -63,19 +60,18 @@ export class HttpResponseHandlerService {
    *
    */
   private handleUnauthorized(): void {
-    if (localStorage.getItem('auth-token')) {
-      this.toastr.error('User is not authorized');
-      localStorage.clear();
-      this.router.navigate(['/logout']);
-    } else {
-      this.toastr.error('Incorrect email or password');
-    }
+    localStorage.clear();
+    this.router.navigate(['/logout']);
   }
 
   /**
    * Shows notification errors when server response status is 403
    */
-  private handleForbidden(): void {}
+  private handleForbidden(response: {
+    error: { message: string | undefined };
+  }): void {
+    this.toastr.error(response.error.message);
+  }
 
   /**
    * shows error when API returns error code 409 and that is for already exists error
@@ -95,16 +91,17 @@ export class HttpResponseHandlerService {
     this.toastr.error(response.error.message);
   }
 
-  // tslint:disable-next-line: max-line-length
   private handleUserCanNotDeleteAdminUser(response: {
     error: {
-      data: { failedPaymentActionValue: any };
       message: string | undefined;
     };
   }): void {
-    if (response.error.data && !response.error.data.failedPaymentActionValue) {
-      // added condition to not show error when error is from service page view
-      this.toastr.error(response.error.message);
-    }
+    this.toastr.error(response.error.message);
+  }
+
+  private unhandeledError(response: {
+    error: { message: string | undefined };
+  }): void {
+    this.toastr.error(response.error.message);
   }
 }
