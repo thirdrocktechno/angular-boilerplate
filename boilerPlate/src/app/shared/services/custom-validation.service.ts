@@ -6,6 +6,7 @@ import {
   ValidationErrors,
   ValidatorFn,
 } from '@angular/forms';
+import { password, phoneNumber } from '../constants/constants';
 
 @Injectable({
   providedIn: 'root',
@@ -20,12 +21,7 @@ export class CustomValidationService {
       return null;
     }
 
-    if (
-      control.value &&
-      control.value.match(
-        new RegExp(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/)
-      )
-    ) {
+    if (control.value && control.value.match(new RegExp(password))) {
       return null;
     }
     return { passwordInvalid: true };
@@ -41,7 +37,7 @@ export class CustomValidationService {
     if (control.value === '' || control.value === null) {
       return null;
     }
-    if (control.value.match(/^\d{10}$/)) {
+    if (control.value.match(phoneNumber)) {
       return null;
     }
     return { invalidPhoneNumber: true };
