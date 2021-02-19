@@ -10,6 +10,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-confirm-dialog',
@@ -28,8 +29,8 @@ export class ConfirmDialogComponent implements OnInit, OnChanges {
   @Output() succesConfirmation: EventEmitter<any> = new EventEmitter();
 
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use('en');
+    translate.setDefaultLang(environment.defaultLanguage);
+    translate.use(environment.defaultLanguage);
   }
 
   ngOnInit(): void {}

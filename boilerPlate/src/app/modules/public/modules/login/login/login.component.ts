@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { get } from 'lodash';
 import { TranslateService } from '@ngx-translate/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -19,8 +20,8 @@ export class LoginComponent implements OnInit {
     private toastr: ToastrService,
     private translate: TranslateService
   ) {
-    translate.setDefaultLang('en');
-    translate.use('en');
+    translate.setDefaultLang(environment.defaultLanguage);
+    translate.use(environment.defaultLanguage);
   }
 
   ngOnInit(): void {
