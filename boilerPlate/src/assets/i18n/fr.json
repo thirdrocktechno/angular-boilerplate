@@ -1,0 +1,40 @@
+{
+  "common": {
+    "cancelBtn": "Annuler",
+    "pageNotFound": "Page non trouvée"
+  },
+  "login": {
+    "title": "Connectez-vous à votre compte",
+    "emailAddressLabel": "Adresse e-mail",
+    "emailAddressRequiredMessage": "Veuillez saisir votre adresse e-mail",
+    "validEmailAddressMessage": "Veuillez saisir une adresse e-mail valide",
+    "passwordLabel": "Mot de passe",
+    "passwordRequiredErrorMsg": "Veuillez entrer un mot de passe.",
+    "rememberMeLabel": "Souviens-toi de moi",
+    "forgotPasswordLabel": "Mot de passe oublié?",
+    "signInLabel": "S'identifier"
+  },
+  "header": {
+    "openMainMenu": "Ouvrir le menu principal",
+    "dashboard": "Tableau de bord",
+    "team": "Équipe",
+    "projects": "Projets",
+    "calendar": "Calendrier",
+    "viewNotifications": "Afficher les notifications",
+    "openUserMenu": "Ouvrir le menu utilisateur",
+    "profile": "Votre profil",
+    "settings": "Réglages",
+    "signOut": "Déconnexion"
+  },
+  "sidebar": {
+    "header": "Entête",
+    "blog": "Blog",
+    "portfolio": "Portefeuille",
+    "about": "À propos de",
+    "contact": "Contacter",
+    "dropdown": "Menu déroulant",
+    "link1": "Lien n ° 1",
+    "link2": "Lien n ° 2",
+    "link3": "Lien n ° 3"
+  }
+}
